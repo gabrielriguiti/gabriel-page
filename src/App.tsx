@@ -1,7 +1,11 @@
 import './App.css'
 import imgBrand from "./assets/brand.jpg";
 import imgPerfil from "./assets/perfil.jpg";
+import imgWhats from "./assets/whatsapp.png";
+import imgInstagram from "./assets/instagram.png";
+import imgStrava from "./assets/strava.png";
 import BlogComponent from "./components/blog-component.tsx";
+import SponsorsComponent from "./components/sponsors.component.tsx";
 
 function App() {
     return (
@@ -14,21 +18,21 @@ function App() {
                 </p>
             </div>
 
-            <div className="bg-[url('./assets/home.jpg')] bg-cover bg-center h-[500px] w-full">
+            <div className="bg-[url('./assets/home.jpg')] bg-cover bg-center h-[600px] md:h-[700px] w-full">
                 <div className={"flex flex-col md:flex-row h-full w-full items-center justify-center"}>
                     <img src={imgPerfil} className={"h-[200px] w-[350px] md:h-[500px] md:w-1/3"} alt={"Perfil"}/>
 
                     <div className={"h-auto w-[350px] md:h-[500px] md:w-1/2 bg-black/50 p-3"}>
                         <p className={"text-white text-2xl md:text-3xl font-montserrat font-bold"}>Gabriel Riguiti</p>
 
-                        <div className={"w-full mt-6 flex justify-between"}>
+                        <div className={"w-full mt-6 px-10 flex justify-between"}>
                             <div>
                                 <div className={"mt-2"}>
                                     <p className={"text-white text-sm md:text-xl font-montserrat font-semibold"}>
                                         Nascimento
                                     </p>
 
-                                    <p className={"text-white text-xs md:text-md font-montserrat font-light"}>
+                                    <p className={"text-white text-xs md:text-lg font-montserrat font-light"}>
                                         05/09/2001 - 24 anos
                                     </p>
                                 </div>
@@ -38,7 +42,7 @@ function App() {
                                         Naturalidade
                                     </p>
 
-                                    <p className={"text-white text-xs md:text-md font-light"}>
+                                    <p className={"text-white text-xs md:text-lg font-light"}>
                                         Muriaé - MG
                                     </p>
                                 </div>
@@ -47,7 +51,7 @@ function App() {
                                     <p className={"text-white text-sm md:text-xl font-montserrat font-semibold"}>
                                         Altura
                                     </p>
-                                    <p className={"text-white text-xs md:text-md font-light"}>
+                                    <p className={"text-white text-xs md:text-lg font-light"}>
                                         1,75m
                                     </p>
                                 </div>
@@ -56,7 +60,7 @@ function App() {
                                     <p className={"text-white text-sm md:text-xl font-montserrat font-semibold"}>
                                         Peso
                                     </p>
-                                    <p className={"text-white text-xs md:text-md font-light"}>
+                                    <p className={"text-white text-xs md:text-lg font-light"}>
                                         77kg
                                     </p>
                                 </div>
@@ -68,7 +72,7 @@ function App() {
                                         Potência Máx. Pico
                                     </p>
 
-                                    <p className={"text-white text-xs md:text-md font-light"}>
+                                    <p className={"text-white text-xs md:text-lg font-light"}>
                                         1378 Watts (2025)
                                     </p>
                                 </div>
@@ -78,7 +82,7 @@ function App() {
                                         Total Km/Ano
                                     </p>
 
-                                    <p className={"text-white text-xs md:text-md font-light"}>
+                                    <p className={"text-white text-xs md:text-lg font-light"}>
                                         11.768,5 (2024)
                                     </p>
                                 </div>
@@ -88,7 +92,7 @@ function App() {
                                         Velocidade Máx. Descida
                                     </p>
 
-                                    <p className={"text-white text-xs md:text-md font-light"}>
+                                    <p className={"text-white text-xs md:text-lg font-light"}>
                                         96 km/h (2024)
                                     </p>
                                 </div>
@@ -97,7 +101,7 @@ function App() {
                                     <p className={"text-white text-sm md:text-xl font-montserrat font-semibold"}>
                                         Nutrição em Competição
                                     </p>
-                                    <p className={"text-white text-xs md:text-md font-light"}>
+                                    <p className={"text-white text-xs md:text-lg font-light"}>
                                         80-100g carb/h
                                     </p>
                                 </div>
@@ -108,9 +112,9 @@ function App() {
             </div>
 
             <div className="py-5 px-8 md:px-36">
-                <p className={"font-montserrat text-2xl font-bold text-white"}>Sobre Mim</p>
+                <p className={"font-montserrat text-2xl font-bold text-white mt-5"}>Sobre Mim</p>
 
-                <p className={"font-montserrat text-justify text-white my-10"}>
+                <p className={"font-montserrat text-justify text-white my-10 md:text-xl"}>
                     Iniciei minha trajetória no ciclismo em 2015, participando de competições até 2019. Após
                     enfrentar complicações relacionadas à minha deficiência, precisei me afastar temporariamente
                     da modalidade. Ainda assim, o amor pelas duas rodas permaneceu: migrei para o mountain bike,
@@ -127,7 +131,7 @@ function App() {
                 </p>
             </div>
 
-            <div className="bg-[url('./assets/seasson.jpg')] bg-cover bg-center h-[500px] w-full flex items-center">
+            <div className="bg-[url('./assets/seasson.jpg')] bg-cover bg-center h-[500px] md:h-[700px] w-full flex items-center">
                 <div className="h-10/12 flex overflow-x-auto">
                     <div className={"bg-black/50 w-3/4 md:w-5/12 rounded-md m-4 md:m-10 p-3 md:p-10 flex-shrink-0"}>
                         <div className={"text-white text-lg md:text-2xl font-montserrat font-bold mb-5"}>
@@ -218,6 +222,59 @@ function App() {
             </div>
 
             <BlogComponent/>
+
+            <SponsorsComponent/>
+
+            <div className="py-20 px-5 md:py-16 md:px-10 items-center md:mx-10 flex">
+                <img src={imgBrand} className={"w-12 h-12 md:w-16 md:h-16"} alt={"Marca"}/>
+
+                <div className={"pl-5 flex flex-col"}>
+                    <p className="text-white font-bold font-montserrat text-lg md:text-2xl">
+                        Gabriel Riguiti | Paraciclista
+                    </p>
+
+                    <div className={"ml-3 mt-1 flex flex-row"}>
+                        <a
+                            href="https://api.whatsapp.com/send?phone=5565996193139&text=Ol%C3%A1%20Gabriel!"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{textDecoration: "none"}}
+                        >
+                            <img
+                                src={imgWhats}
+                                alt="WhatsApp"
+                                className={"w-4 h-4 md:w-6 md:h-6"}
+                            />
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com/gabrielriguiti/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{textDecoration: "none"}}
+                        >
+                            <img
+                                src={imgInstagram}
+                                alt="Instagram"
+                                className={"w-4 h-4 ml-2 md:w-6 md:h-6"}
+                            />
+                        </a>
+
+                        <a
+                            href="https://www.strava.com/athletes/45782246"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{textDecoration: "none"}}
+                        >
+                            <img
+                                src={imgStrava}
+                                alt="Strava"
+                                className={"w-4 h-4 ml-2 md:w-6 md:h-6"}
+                            />
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

@@ -13,10 +13,10 @@ export default function BlogComponent() {
     }, [])
 
     return (
-        <div className="pt-5 pb-10 md:px-12">
-            <p className={"ml-5 font-bold text-white text-2xl"}>Blog</p>
+        <div className="pt-5 pb-10 md:pt-10 md:pb-15">
+            <p className={"ml-5 font-bold text-white text-2xl md:px-36"}>Blog</p>
 
-            <div className="overflow-x-auto mt-5">
+            <div className="overflow-x-auto mt-10 md:px-20">
                 <div
                     className="grid gap-y-4"
                     style={{
