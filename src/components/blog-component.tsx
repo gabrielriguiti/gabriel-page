@@ -6,7 +6,7 @@ export default function BlogComponent() {
     const [events, setEvents] = useState<BlogItem[]>([]);
 
     useEffect(() => {
-        api.get('/event')
+        api.get('/api/event')
             .then((result) => {
                 setEvents(result as BlogItem[]);
             })

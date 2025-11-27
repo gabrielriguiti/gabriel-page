@@ -6,7 +6,7 @@ export default function SponsorsComponent() {
     const [sponsors, setSponsors] = useState<SponsorItem[]>([]);
 
     useEffect(() => {
-        api.get('/sponsor')
+        api.get('/api/sponsor')
             .then((result) => {
                 setSponsors(result as SponsorItem[]);
             })
