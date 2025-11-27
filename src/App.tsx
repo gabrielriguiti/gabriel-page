@@ -86,7 +86,7 @@ function App() {
                     </p>
                     <p className="about-text mt-6">
                         Em 2025, retornei ao cenário competitivo através do paraciclismo — modalidade na qual estou
-                        atualmente totalmente dedicado. Compito na categoria MC3, destinada a atletas com limitações
+                        atualmente totalmente dedicado. Disputo na categoria MC3, destinada a atletas com limitações
                         locomotoras moderadas, mas que mantêm boa funcionalidade para o ciclismo de estrada e pista.
                         Minha deficiência é o pé torto congênito bilateral, condição que impacta mobilidade, força e
                         alinhamento dos membros inferiores, tornando a adaptação biomecânica essencial para o desempenho
