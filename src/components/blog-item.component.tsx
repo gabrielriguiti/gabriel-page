@@ -18,26 +18,58 @@ export default function BlogItemComponent({item}: BlogItemProps) {
 
     return (
         <div
-            className="relative w-[250px] h-[300px] md:w-[300px] md:h-[300px] mx-5 rounded-xl overflow-hidden bg-cover bg-center"
-            style={{backgroundImage: `url(${baseUrl}${imageUrl})`}}
+            className="blog-card relative w-[280px] h-[320px] md:w-[320px] md:h-[340px] rounded-xl overflow-hidden bg-cover bg-center cursor-pointer"
+            style={{
+                backgroundImage: `url(${baseUrl}${imageUrl})`,
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+            }}
+            onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-8px)';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(245, 158, 11, 0.2)';
+            }}
+            onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = 'none';
+            }}
         >
-            <div className="absolute top-0 left-0 w-full h-full bg-black/30"/>
+            {/* Gradient Overlay */}
+            <div 
+                className="absolute inset-0"
+                style={{
+                    background: 'linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%)'
+                }}
+            />
 
-            <div className="w-full h-full flex flex-col justify-between">
-                <div
-                    className="bg-gray-50 self-start flex flex-col justify-center items-center rounded-sm ml-5 mt-5 px-3 py-1 w-12 h-16">
-                    <p className="font-montserrat font-medium text-lg text-black/60">
+            <div className="relative w-full h-full flex flex-col justify-between p-5">
+                {/* Date Badge */}
+                <div 
+                    className="self-start flex flex-col justify-center items-center rounded-lg px-4 py-2"
+                    style={{
+                        background: 'rgba(255, 255, 255, 0.95)',
+                        backdropFilter: 'blur(10px)',
+                        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+                    }}
+                >
+                    <p className="font-bold text-2xl" style={{color: '#f59e0b'}}>
                         {dateFormatted.getUTCDate()}
                     </p>
-
-                    <p className={"font-montserrat font-medium text-sm text-black/60"}>
+                    <p className="font-semibold text-xs uppercase tracking-wider" style={{color: '#4b5563'}}>
                         {months[dateFormatted.getUTCMonth()]}
                     </p>
                 </div>
 
-                <p className="w-full px-2 mb-3 font-montserrat font-light text-center text-white drop-shadow-lg">
-                    {description}
-                </p>
+                {/* Description */}
+                <div 
+                    className="rounded-lg p-3"
+                    style={{
+                        background: 'rgba(0, 0, 0, 0.6)',
+                        backdropFilter: 'blur(10px)'
+                    }}
+                >
+                    <p className="font-medium text-sm md:text-base text-center text-white leading-relaxed">
+                        {description}
+                    </p>
+                </div>
             </div>
         </div>
     )
