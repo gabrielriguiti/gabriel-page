@@ -13,34 +13,49 @@ export default function SponsorsComponent() {
     }, [])
 
     return (
-        <div className="bg-white/90 py-5 px-8 md:px-36">
-            <p className={"font-montserrat text-2xl font-bold mb-5"}>
-                Patrocinadores
-            </p>
+        <section 
+            className="section"
+            style={{
+                background: 'linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%)'
+            }}
+        >
+            <div className="container">
+                <h2 className="section-title" style={{color: '#1f2937'}}>Patrocinadores</h2>
 
-            <div className="bg-white p-5 md:p-12 rounded-sm">
-                <div className="grid gap-5 grid-cols-4 sm:grid-cols-5 place-items-center">
-                    {sponsors.filter(s => s.type == "SPO").map((item) => (
-                        <div key={item._id}>
-                            <SponsorItemComponent item={item}/>
-                        </div>
-                    ))}
+                <div 
+                    className="mt-8 p-6 md:p-10 rounded-2xl"
+                    style={{
+                        background: 'white',
+                        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)'
+                    }}
+                >
+                    <div className="grid gap-6 md:gap-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center">
+                        {sponsors.filter(s => s.type == "SPO").map((item) => (
+                            <div key={item._id}>
+                                <SponsorItemComponent item={item}/>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <h2 className="section-title mt-12" style={{color: '#1f2937'}}>Apoiadores</h2>
+
+                <div 
+                    className="mt-8 p-6 md:p-10 rounded-2xl"
+                    style={{
+                        background: 'white',
+                        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)'
+                    }}
+                >
+                    <div className="grid gap-6 md:gap-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center">
+                        {sponsors.filter(s => s.type == "SUP").map((item) => (
+                            <div key={item._id}>
+                                <SponsorItemComponent item={item}/>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
-
-            <p className={"font-montserrat text-2xl font-bold mt-5 mb-5"}>
-                Apoiadores
-            </p>
-
-            <div className="bg-white p-5 md:p-12 rounded-sm">
-                <div className="grid gap-5 grid-cols-4 sm:grid-cols-5 place-items-center">
-                    {sponsors.filter(s => s.type == "SUP").map((item) => (
-                        <div key={item._id}>
-                            <SponsorItemComponent item={item}/>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </div>
+        </section>
     )
 }
