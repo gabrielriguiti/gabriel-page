@@ -78,7 +78,7 @@ function App() {
                     <h2 className="section-title text-white">Sobre Mim</h2>
 
                     <p className="about-text mt-8">
-                        Iniciei minha trajetória no ciclismo na modalide Downhill em 2015, participando de competições até 2019. Após
+                        Iniciei minha trajetória no ciclismo na modalidade Downhill em 2015, participando de competições até 2019. Após
                         enfrentar complicações relacionadas à minha deficiência, precisei me afastar temporariamente
                         da modalidade. Ainda assim, o amor pelas duas rodas permaneceu: migrei para o mountain bike,
                         competindo nas modalidades maratona e cross-country olímpico junto a atletas convencionais
