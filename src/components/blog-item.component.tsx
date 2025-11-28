@@ -9,8 +9,8 @@ type BlogItemProps = {
     item: BlogItem;
 }
 
-export default function BlogItemComponent({item}: BlogItemProps) {
-    const {date, description, imageUrl} = item;
+export default function BlogItemComponent({ item }: BlogItemProps) {
+    const { date, description, imageUrl } = item;
 
     const dateFormatted = new Date(date);
     const baseUrl = import.meta.env.VITE_API_BASE_URL;
@@ -18,31 +18,24 @@ export default function BlogItemComponent({item}: BlogItemProps) {
 
     return (
         <div
-            className="blog-card relative w-[280px] h-[320px] md:w-[320px] md:h-[340px] rounded-xl overflow-hidden bg-cover bg-center cursor-pointer"
+            className="blog-card relative w-[340px] h-[400px] md:w-[400px] md:h-[440px] rounded-xl overflow-hidden bg-cover bg-center cursor-pointer"
             style={{
                 backgroundImage: `url(${baseUrl}${imageUrl})`,
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+                transition: 'transform 0.3s ease'
             }}
             onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)';
-                e.currentTarget.style.boxShadow = '0 20px 40px rgba(245, 158, 11, 0.2)';
             }}
             onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = 'none';
             }}
         >
-            {/* Gradient Overlay */}
-            <div 
-                className="absolute inset-0"
-                style={{
-                    background: 'linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%)'
-                }}
-            />
+
+  
 
             <div className="relative w-full h-full flex flex-col justify-between p-5">
                 {/* Date Badge */}
-                <div 
+                <div
                     className="self-start flex flex-col justify-center items-center rounded-lg px-4 py-2"
                     style={{
                         background: 'rgba(255, 255, 255, 0.95)',
@@ -50,16 +43,16 @@ export default function BlogItemComponent({item}: BlogItemProps) {
                         boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
                     }}
                 >
-                    <p className="font-bold text-2xl" style={{color: '#f59e0b'}}>
+                    <p className="font-bold text-2xl" style={{ color: '#f59e0b' }}>
                         {dateFormatted.getUTCDate()}
                     </p>
-                    <p className="font-semibold text-xs uppercase tracking-wider" style={{color: '#4b5563'}}>
+                    <p className="font-semibold text-xs uppercase tracking-wider" style={{ color: '#4b5563' }}>
                         {months[dateFormatted.getUTCMonth()]}
                     </p>
                 </div>
 
                 {/* Description */}
-                <div 
+                <div
                     className="rounded-lg p-3"
                     style={{
                         background: 'rgba(0, 0, 0, 0.6)',
