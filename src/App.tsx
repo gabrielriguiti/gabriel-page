@@ -12,7 +12,7 @@ function App() {
         <div className="min-h-screen">
             {/* Header */}
             <header className="header px-4">
-                <div className="container header-content">
+                <div className="container header-content space-x-4">
                     <img src={imgBrand} className="brand-logo" alt="Marca"/>
                     <p className="brand-name">Gabriel Riguiti | Paraciclista</p>
                 </div>
@@ -98,65 +98,167 @@ function App() {
             {/* Season Section */}
             <section className="season-section">
                 <div className="season-background bg-[url('./assets/seasson.jpg')]"></div>
-                <div className="season-content container ">
-                    <div className="season-cards my-20">
-                        <div className="season-card m-auto">
-                            <h3 className="season-card-title">🎯 Objetivos para 2026</h3>
+                <div className="season-content container">
+                    {/* Section Header */}
+                    <div className="season-header">
+                        <h2 className="section-title text-white">Conquistas & Objetivos</h2>
+                        <p className="season-description">Minha jornada no paraciclismo, uma conquista de cada vez</p>
+                    </div>
 
-                            <p className="season-subtitle">Campeonatos Principais</p>
+                    {/* Stats Summary */}
+                    <div className="stats-summary">
+                        <div className="summary-item">
+                            <span className="summary-number">8</span>
+                            <span className="summary-label">🥇 Ouros</span>
+                        </div>
+                        <div className="summary-item">
+                            <span className="summary-number">1</span>
+                            <span className="summary-label">🥈 Prata</span>
+                        </div>
+                        <div className="summary-item">
+                            <span className="summary-number">1</span>
+                            <span className="summary-label">🥉 Bronze</span>
+                        </div>
+                    </div>
 
-                            <div className="achievement-item">
-                                ✅ Campeonato PanAmericano - Fevereiro/Rio de Janeiro
-                            </div>
-                            <div className="achievement-item">
-                                ✅ Jogos ParaSul-Americanos - Julho/Valledupar - Colômbia
-                            </div>
-
-                            <p className="season-subtitle">Demais Campeonatos</p>
-
-                            <div className="achievement-item">
-                                ✅ Campeonato Brasileiro de Paraciclismo de Estrada - Resistência
-                            </div>
-                            <div className="achievement-item">
-                                ✅ Campeonato Brasileiro de Paraciclismo de Estrada - Contrarelógio
-                            </div>
-                            <div className="achievement-item">
-                                ✅ Copa Brasil de Paraciclismo de Estrada - Contrarelógio
-                            </div>
-                            <div className="achievement-item">
-                                ✅ Copa Brasil de Paraciclismo de Estrada - Resistência
-                            </div>
-                            <div className="achievement-item">
-                                ✅ Campeonato Matogrossense de Ciclismo de Estrada - Resistência (Sub 30/Atletas Sem Deficiência)
-                            </div>
+                    {/* 2025 Achievements Grid */}
+                    <div className="achievements-block">
+                        <div className="achievements-year-header ">
+                            <span className="year-badge rounded-lg">2025</span>
+                            <h3 className="year-title">Temporada Atual</h3>
                         </div>
 
-                        <div className="season-card m-auto">
-                            <h3 className="season-card-title">🏆 Temporada 2025</h3>
+                        <div className="achievements-grid">
+                            {/* Campeonato Brasileiro */}
+                            <div className="achievement-card gold">
+                                <div className="card-medal">🥇</div>
+                                <div className="card-content">
+                                    <span className="card-category">Campeonato Brasileiro</span>
+                                    <h4 className="card-title">Paraciclismo de Estrada</h4>
+                                    <span className="card-detail">Resistência</span>
+                                </div>
+                            </div>
 
-                            <div className="achievement-item">
-                                🥇 Campeonato Brasileiro de Paraciclismo de Estrada - Resistência
+                            <div className="achievement-card gold">
+                                <div className="card-medal">🥇</div>
+                                <div className="card-content">
+                                    <span className="card-category">Campeonato Brasileiro</span>
+                                    <h4 className="card-title">Paraciclismo de Estrada</h4>
+                                    <span className="card-detail">Contrarelógio</span>
+                                </div>
                             </div>
-                            <div className="achievement-item">
-                                🥇 Campeonato Brasileiro de Paraciclismo de Estrada - Contrarelógio
+
+                            {/* Copa Brasil */}
+                            <div className="achievement-card gold double">
+                                <div className="card-medal">🥇🥇</div>
+                                <div className="card-content">
+                                    <span className="card-category">Copa Brasil</span>
+                                    <h4 className="card-title">Paraciclismo de Estrada</h4>
+                                    <span className="card-detail">Contrarelógio · 2 Etapas</span>
+                                </div>
                             </div>
-                            <div className="achievement-item">
-                                🥇🥇 Etapa de Copa Brasil de Paraciclismo de Estrada - Contrarelógio
+
+                            <div className="achievement-card gold double">
+                                <div className="card-medal">🥇🥇</div>
+                                <div className="card-content">
+                                    <span className="card-category">Copa Brasil</span>
+                                    <h4 className="card-title">Paraciclismo de Estrada</h4>
+                                    <span className="card-detail">Resistência · 2 Etapas</span>
+                                </div>
                             </div>
-                            <div className="achievement-item">
-                                🥇🥇 Etapa de Copa Brasil de Paraciclismo de Estrada - Resistência
+
+                            {/* GP e Estadual */}
+                            <div className="achievement-card gold double">
+                                <div className="card-medal">🥇🥇</div>
+                                <div className="card-content">
+                                    <span className="card-category">GP Ciclismo</span>
+                                    <h4 className="card-title">Estrada - Resistência</h4>
+                                    <span className="card-tag">Sub 30 · Convencional</span>
+                                </div>
                             </div>
-                            <div className="achievement-item">
-                                🥇🥇 GP Ciclismo de Estrada - Resistência (Sub 30/Atletas Sem Deficiência)
+
+                            <div className="achievement-card silver">
+                                <div className="card-medal">🥈</div>
+                                <div className="card-content">
+                                    <span className="card-category">Campeonato Matogrossense</span>
+                                    <h4 className="card-title">Ciclismo de Estrada</h4>
+                                    <span className="card-tag">Sub 30 · Convencional</span>
+                                </div>
                             </div>
-                            <div className="achievement-item">
-                                🥈 Vice Campeão Matogrossense de Ciclismo de Estrada - Resistência (Sub 30/Atletas Sem Deficiência)
+
+                            {/* MTB */}
+                            <div className="achievement-card gold">
+                                <div className="card-medal">🥇</div>
+                                <div className="card-content">
+                                    <span className="card-category">MTB XCM</span>
+                                    <h4 className="card-title">Regional</h4>
+                                    <span className="card-tag">Sub 30 · Convencional</span>
+                                </div>
                             </div>
-                            <div className="achievement-item">
-                                🥇 MTB XCM Regional (Sub 30/Atletas Sem Deficiência)
+
+                            <div className="achievement-card bronze">
+                                <div className="card-medal">🥉</div>
+                                <div className="card-content">
+                                    <span className="card-category">MTB XCO</span>
+                                    <h4 className="card-title">Regional</h4>
+                                    <span className="card-tag">Sub 30 · Convencional</span>
+                                </div>
                             </div>
-                            <div className="achievement-item">
-                                🥉 MTB XCO Regional (Sub 30/Atletas Sem Deficiência)
+                        </div>
+                    </div>
+
+                    {/* 2026 Goals */}
+                    <div className="goals-block">
+                        <div className="achievements-year-header">
+                            <span className="year-badge future rounded-lg">2026</span>
+                            <h3 className="year-title">Próximos Objetivos</h3>
+                        </div>
+
+                        <div className="goals-grid">
+                            {/* Principais */}
+                            <div className="goal-card featured">
+                                <div className="goal-icon">🌎</div>
+                                <div className="goal-content">
+                                    <span className="goal-date">Fevereiro</span>
+                                    <h4 className="goal-title">Campeonato PanAmericano</h4>
+                                    <span className="goal-location">📍 Rio de Janeiro, Brasil</span>
+                                </div>
+                                <div className="goal-status">Principal</div>
+                            </div>
+
+                            <div className="goal-card featured">
+                                <div className="goal-icon">🌎</div>
+                                <div className="goal-content">
+                                    <span className="goal-date">Julho</span>
+                                    <h4 className="goal-title">Jogos ParaSul-Americanos</h4>
+                                    <span className="goal-location">📍 Valledupar, Colômbia</span>
+                                </div>
+                                <div className="goal-status">Principal</div>
+                            </div>
+
+                            {/* Nacionais */}
+                            <div className="goal-card">
+                                <div className="goal-icon">🇧🇷</div>
+                                <div className="goal-content">
+                                    <h4 className="goal-title">Brasileiro de Paraciclismo</h4>
+                                    <span className="goal-detail">Resistência + Contrarelógio</span>
+                                </div>
+                            </div>
+
+                            <div className="goal-card">
+                                <div className="goal-icon">🏆</div>
+                                <div className="goal-content">
+                                    <h4 className="goal-title">Copa Brasil de Paraciclismo</h4>
+                                    <span className="goal-detail">Resistência + Contrarelógio</span>
+                                </div>
+                            </div>
+
+                            <div className="goal-card">
+                                <div className="goal-icon">🚴</div>
+                                <div className="goal-content">
+                                    <h4 className="goal-title">Campeonato Matogrossense</h4>
+                                    <span className="goal-detail">Estrada - Resistência (Sub 30)</span>
+                                </div>
                             </div>
                         </div>
                     </div>

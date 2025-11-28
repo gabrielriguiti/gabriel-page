@@ -19,7 +19,6 @@
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--color-primary);
 }
 
 @media (min-width: 768px) {
@@ -30,8 +29,7 @@
 }
 
 .brand-name {
-  margin-left: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.125rem;
   background: linear-gradient(135deg, #ffffff, #f59e0b);
   -webkit-background-clip: text;
@@ -124,8 +122,8 @@
 }
 
 .hero-name {
-  font-size: 2rem;
-  font-weight: 800;
+  font-size: 1.5rem;
+  font-weight: 700;
   margin-bottom: 1.5rem;
   background: linear-gradient(135deg, #ffffff, var(--color-primary));
   -webkit-background-clip: text;
@@ -198,9 +196,10 @@
 /* ===== Season Section ===== */
 .season-section {
   position: relative;
-  min-height: 600px;
+  min-height: 100vh;
   display: flex;
   align-items: center;
+  padding: 4rem 0;
 }
 
 .season-background {
@@ -216,10 +215,10 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(0, 0, 0, 0.5) 50%,
-    rgba(0, 0, 0, 0.8) 100%
+    180deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(0, 0, 0, 0.9) 100%
   );
 }
 
@@ -227,82 +226,302 @@
   position: relative;
   z-index: 10;
   width: 100%;
-  overflow-x: auto;
-  padding: 2rem 0;
-  scrollbar-width: thin;
 }
 
-.season-cards {
-  display: flex;
-  gap: 1.5rem;
-  padding: 0 1rem;
+/* Season Header */
+.season-header {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-@media (min-width: 768px) {
-  .season-cards {
-    gap: 2rem;
-    padding: 0 2rem;
-  }
-}
-
-.season-card {
-  flex-shrink: 0;
-  width: 320px;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(20px);
-  border-radius: var(--radius-xl);
-  padding: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-@media (min-width: 768px) {
-  .season-card {
-    width: 450px;
-    padding: 2rem;
-  }
-}
-
-.season-card-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: var(--color-primary);
-}
-
-@media (min-width: 768px) {
-  .season-card-title {
-    font-size: 1.5rem;
-  }
-}
-
-.season-subtitle {
+.season-description {
+  color: rgba(255, 255, 255, 0.7);
   font-size: 1rem;
-  font-weight: 600;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
-  color: white;
+  margin-top: 0.75rem;
 }
 
 @media (min-width: 768px) {
-  .season-subtitle {
+  .season-description {
     font-size: 1.125rem;
   }
 }
 
-.achievement-item {
+/* Stats Summary */
+.stats-summary {
   display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-  padding: 0.5rem 0;
-  font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.9);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
 }
 
 @media (min-width: 768px) {
-  .achievement-item {
-    font-size: 1rem;
+  .stats-summary {
+    gap: 3rem;
   }
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-width: 90px;
+}
+
+.summary-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .summary-number {
+    font-size: 2.5rem;
+  }
+}
+
+.summary-label {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 0.5rem;
+}
+
+/* Achievements Block */
+.achievements-block,
+.goals-block {
+  margin-bottom: 3rem;
+}
+
+.achievements-year-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.year-badge {
+  background: linear-gradient(135deg, var(--color-primary), #d97706);
+  color: #000;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.year-badge.future {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: #fff;
+}
+
+.year-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .year-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Achievements Grid */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .achievements-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Achievement Card */
+.achievement-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.achievement-card.gold {
+  border-left: 3px solid #fbbf24;
+}
+
+.achievement-card.silver {
+  border-left: 3px solid #9ca3af;
+}
+
+.achievement-card.bronze {
+  border-left: 3px solid #cd7f32;
+}
+
+.card-medal {
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.card-category {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  line-height: 1.3;
+}
+
+.card-detail {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.card-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  width: fit-content;
+  margin-top: 0.25rem;
+}
+
+/* Goals Grid */
+.goals-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .goals-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .goals-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Goal Card */
+.goal-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.goal-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
+}
+
+.goal-card.featured {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(29, 78, 216, 0.1));
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+@media (min-width: 1024px) {
+  .goal-card.featured {
+    grid-column: span 1;
+  }
+}
+
+.goal-icon {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.goal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.goal-date {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #60a5fa;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.goal-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  line-height: 1.3;
+}
+
+.goal-location {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.goal-detail {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.goal-status {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #60a5fa;
+  background: rgba(59, 130, 246, 0.2);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* ===== Footer ===== */
@@ -329,7 +548,7 @@
 .footer-brand {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.2rem;
 }
 
 .footer-social {
