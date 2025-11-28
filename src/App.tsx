@@ -13,7 +13,7 @@ function App() {
             {/* Header */}
             <header className="header px-4">
                 <div className="container header-content space-x-4">
-                    <img src={imgBrand} className="brand-logo" alt="Marca"/>
+                    <img src={imgBrand} className="brand-logo" alt="Marca" />
                     <p className="brand-name">Gabriel Riguiti | Paraciclista</p>
                 </div>
             </header>
@@ -21,53 +21,121 @@ function App() {
             {/* Hero Section */}
             <section className="hero">
                 <div className="hero-background bg-[url('./assets/home.jpg')]"></div>
+                <div className="hero-overlay"></div>
+
                 <div className="container hero-content">
-                    <img src={imgPerfil} className="hero-image m-auto" alt="Perfil"/>
-
-                    <div className="hero-info-card m-auto">
-                        <h1 className="hero-name">Gabriel Riguiti</h1>
-
-                        <div className="stats-grid">
-                            <div className="stat-item">
-                                <p className="stat-label">Nascimento</p>
-                                <p className="stat-value">05/09/2001 - 24 anos</p>
+                    {/* Hero Main Info */}
+                    <div className="hero-main">
+                        {/* Profile Image with Badge */}
+                        <div className="hero-profile">
+                            <div className="profile-image-container">
+                                <img src={imgPerfil} className="hero-image" alt="Gabriel Riguiti" />
+                                <div className="profile-badge">
+                                    <span className="badge-icon">🚴</span>
+                                    <span className="badge-text">MC3</span>
+                                </div>
                             </div>
 
-                            <div className="stat-item">
-                                <p className="stat-label">Potência Máx. Pico</p>
-                                <p className="stat-value">1378 Watts (2025)</p>
-                            </div>
-
-                            <div className="stat-item">
-                                <p className="stat-label">Naturalidade</p>
-                                <p className="stat-value">Muriaé - MG</p>
-                            </div>
-
-                            <div className="stat-item">
-                                <p className="stat-label">Total Km/Ano</p>
-                                <p className="stat-value">11.768,5 (2024)</p>
-                            </div>
-
-                            <div className="stat-item">
-                                <p className="stat-label">Altura</p>
-                                <p className="stat-value">1,75m</p>
-                            </div>
-
-                            <div className="stat-item">
-                                <p className="stat-label">Velocidade Máx.</p>
-                                <p className="stat-value">96 km/h (2024)</p>
-                            </div>
-
-                            <div className="stat-item">
-                                <p className="stat-label">Peso</p>
-                                <p className="stat-value">77kg</p>
-                            </div>
-
-                            <div className="stat-item">
-                                <p className="stat-label">Nutrição Competição</p>
-                                <p className="stat-value">80-100g carb/h</p>
+                            {/* Quick Stats Badges */}
+                            <div className="quick-badges">
+                                <div className="quick-badge gold">
+                                    <span className="badge-number">8</span>
+                                    <span className="badge-label">🥇 Ouros 2025</span>
+                                </div>
                             </div>
                         </div>
+
+                        {/* Hero Text Content */}
+                        <div className="hero-text">
+                            <div className="hero-subtitle-top">Paraciclista Brasileiro</div>
+                            <h1 className="hero-name">Gabriel Riguiti</h1>
+                            <p className="hero-tagline">
+                                Campeão Brasileiro de Paraciclismo 2025
+                                <br />
+                                <span className="hero-category">Categoria MC3 • Estrada & Contrarelógio</span>
+                            </p>
+
+                            {/* CTA Buttons */}
+                            <div className="hero-cta">
+                                <a
+                                    href="https://api.whatsapp.com/send?phone=5565996193139&text=Ol%C3%A1%20Gabriel!"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="cta-button primary"
+                                >
+                                    <img src={imgWhats} alt="" className="cta-icon" />
+                                    Entre em contato
+                                </a>
+                                <a
+                                    href="https://www.instagram.com/gabrielriguiti/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="cta-button secondary"
+                                >
+                                    <img src={imgInstagram} alt="" className="cta-icon" />
+                                    @gabrielriguiti
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Stats Cards */}
+                    <div className="hero-stats px-4 xl:px-0">
+                        <div className="stats-card">
+                            <div className="stats-card-header">
+                                <span className="stats-card-icon">📊</span>
+                                <span className="stats-card-title">Dados Físicos</span>
+                            </div>
+                            <div className="stats-card-grid">
+                                <div className="stat-item-new">
+                                    <span className="stat-value-new">24</span>
+                                    <span className="stat-label-new">anos</span>
+                                </div>
+                                <div className="stat-item-new">
+                                    <span className="stat-value-new">1,75m</span>
+                                    <span className="stat-label-new">altura</span>
+                                </div>
+                                <div className="stat-item-new">
+                                    <span className="stat-value-new">77kg</span>
+                                    <span className="stat-label-new">peso</span>
+                                </div>
+                                <div className="stat-item-new">
+                                    <span className="stat-value-new">MG</span>
+                                    <span className="stat-label-new">Muriaé</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="stats-card featured">
+                            <div className="stats-card-header">
+                                <span className="stats-card-icon">⚡</span>
+                                <span className="stats-card-title">Performance 2024/25</span>
+                            </div>
+                            <div className="stats-card-grid">
+                                <div className="stat-item-new highlight">
+                                    <span className="stat-value-new">1378W</span>
+                                    <span className="stat-label-new">potência pico</span>
+                                </div>
+                                <div className="stat-item-new highlight">
+                                    <span className="stat-value-new">96km/h</span>
+                                    <span className="stat-label-new">vel. máxima</span>
+                                </div>
+                                <div className="stat-item-new">
+                                    <span className="stat-value-new">11.768km</span>
+                                    <span className="stat-label-new">total 2024</span>
+                                </div>
+                                <div className="stat-item-new">
+                                    <span className="stat-value-new">80-100g</span>
+                                    <span className="stat-label-new">carb/h</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Scroll Indicator */}
+                    <div className="scroll-indicator">
+                        <span>Conheça minha história</span>
+                        <div className="scroll-arrow"></div>
                     </div>
                 </div>
             </section>
@@ -266,15 +334,15 @@ function App() {
             </section>
 
             {/* Blog Section */}
-            <BlogComponent/>
+            <BlogComponent />
 
             {/* Sponsors Section */}
-            <SponsorsComponent/>
+            <SponsorsComponent />
 
             {/* Footer */}
             <footer className="footer section">
                 <div className="container footer-content">
-                    <img src={imgBrand} className="brand-logo" alt="Marca"/>
+                    <img src={imgBrand} className="brand-logo" alt="Marca" />
 
                     <div className="footer-brand">
                         <p className="brand-name">Gabriel Riguiti | Paraciclista</p>
@@ -286,7 +354,7 @@ function App() {
                                 rel="noopener noreferrer"
                                 className="social-link"
                             >
-                                <img src={imgWhats} alt="WhatsApp"/>
+                                <img src={imgWhats} alt="WhatsApp" />
                             </a>
 
                             <a
@@ -295,7 +363,7 @@ function App() {
                                 rel="noopener noreferrer"
                                 className="social-link"
                             >
-                                <img src={imgInstagram} alt="Instagram"/>
+                                <img src={imgInstagram} alt="Instagram" />
                             </a>
 
                             <a
@@ -304,7 +372,7 @@ function App() {
                                 rel="noopener noreferrer"
                                 className="social-link"
                             >
-                                <img src={imgStrava} alt="Strava"/>
+                                <img src={imgStrava} alt="Strava" />
                             </a>
                         </div>
                     </div>
