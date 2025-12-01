@@ -39,7 +39,7 @@ function App() {
                             {/* Quick Stats Badges */}
                             <div className="quick-badges">
                                 <div className="quick-badge gold">
-                                    <span className="badge-number">8</span>
+                                    <span className="badge-number">10</span>
                                     <span className="badge-label">🥇 Ouros 2025</span>
                                 </div>
                             </div>
@@ -109,20 +109,20 @@ function App() {
                         <div className="stats-card featured">
                             <div className="stats-card-header">
                                 <span className="stats-card-icon">⚡</span>
-                                <span className="stats-card-title">Performance 2024/25</span>
+                                <span className="stats-card-title">Performance</span>
                             </div>
                             <div className="stats-card-grid">
                                 <div className="stat-item-new highlight">
                                     <span className="stat-value-new">1378W</span>
-                                    <span className="stat-label-new">potência pico</span>
+                                    <span className="stat-label-new">potência pico (2025)</span>
                                 </div>
                                 <div className="stat-item-new highlight">
                                     <span className="stat-value-new">96km/h</span>
-                                    <span className="stat-label-new">vel. máxima</span>
+                                    <span className="stat-label-new">vel. máxima (2024)</span>
                                 </div>
                                 <div className="stat-item-new">
                                     <span className="stat-value-new">11.768km</span>
-                                    <span className="stat-label-new">total 2024</span>
+                                    <span className="stat-label-new">Total Km/Ano (2024)</span>
                                 </div>
                                 <div className="stat-item-new">
                                     <span className="stat-value-new">80-100g</span>
@@ -176,7 +176,7 @@ function App() {
                     {/* Stats Summary */}
                     <div className="stats-summary">
                         <div className="summary-item">
-                            <span className="summary-number">8</span>
+                            <span className="summary-number">10</span>
                             <span className="summary-label">🥇 Ouros</span>
                         </div>
                         <div className="summary-item">
@@ -186,92 +186,6 @@ function App() {
                         <div className="summary-item">
                             <span className="summary-number">1</span>
                             <span className="summary-label">🥉 Bronze</span>
-                        </div>
-                    </div>
-
-                    {/* 2025 Achievements Grid */}
-                    <div className="achievements-block">
-                        <div className="achievements-year-header ">
-                            <span className="year-badge rounded-lg">2025</span>
-                            <h3 className="year-title">Temporada Atual</h3>
-                        </div>
-
-                        <div className="achievements-grid">
-                            {/* Campeonato Brasileiro */}
-                            <div className="achievement-card gold">
-                                <div className="card-medal">🥇</div>
-                                <div className="card-content">
-                                    <span className="card-category">Campeonato Brasileiro</span>
-                                    <h4 className="card-title">Paraciclismo de Estrada</h4>
-                                    <span className="card-detail">Resistência</span>
-                                </div>
-                            </div>
-
-                            <div className="achievement-card gold">
-                                <div className="card-medal">🥇</div>
-                                <div className="card-content">
-                                    <span className="card-category">Campeonato Brasileiro</span>
-                                    <h4 className="card-title">Paraciclismo de Estrada</h4>
-                                    <span className="card-detail">Contrarelógio</span>
-                                </div>
-                            </div>
-
-                            {/* Copa Brasil */}
-                            <div className="achievement-card gold double">
-                                <div className="card-medal">🥇🥇</div>
-                                <div className="card-content">
-                                    <span className="card-category">Copa Brasil</span>
-                                    <h4 className="card-title">Paraciclismo de Estrada</h4>
-                                    <span className="card-detail">Contrarelógio · 2 Etapas</span>
-                                </div>
-                            </div>
-
-                            <div className="achievement-card gold double">
-                                <div className="card-medal">🥇🥇</div>
-                                <div className="card-content">
-                                    <span className="card-category">Copa Brasil</span>
-                                    <h4 className="card-title">Paraciclismo de Estrada</h4>
-                                    <span className="card-detail">Resistência · 2 Etapas</span>
-                                </div>
-                            </div>
-
-                            {/* GP e Estadual */}
-                            <div className="achievement-card gold double">
-                                <div className="card-medal">🥇🥇</div>
-                                <div className="card-content">
-                                    <span className="card-category">GP Ciclismo</span>
-                                    <h4 className="card-title">Estrada - Resistência</h4>
-                                    <span className="card-tag">Sub 30 · Convencional</span>
-                                </div>
-                            </div>
-
-                            <div className="achievement-card silver">
-                                <div className="card-medal">🥈</div>
-                                <div className="card-content">
-                                    <span className="card-category">Campeonato Matogrossense</span>
-                                    <h4 className="card-title">Ciclismo de Estrada</h4>
-                                    <span className="card-tag">Sub 30 · Convencional</span>
-                                </div>
-                            </div>
-
-                            {/* MTB */}
-                            <div className="achievement-card gold">
-                                <div className="card-medal">🥇</div>
-                                <div className="card-content">
-                                    <span className="card-category">MTB XCM</span>
-                                    <h4 className="card-title">Regional</h4>
-                                    <span className="card-tag">Sub 30 · Convencional</span>
-                                </div>
-                            </div>
-
-                            <div className="achievement-card bronze">
-                                <div className="card-medal">🥉</div>
-                                <div className="card-content">
-                                    <span className="card-category">MTB XCO</span>
-                                    <h4 className="card-title">Regional</h4>
-                                    <span className="card-tag">Sub 30 · Convencional</span>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -326,6 +240,92 @@ function App() {
                                 <div className="goal-content">
                                     <h4 className="goal-title">Campeonato Matogrossense</h4>
                                     <span className="goal-detail">Estrada - Resistência (Sub 30)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* 2025 Achievements Grid */}
+                    <div className="achievements-block">
+                        <div className="achievements-year-header ">
+                            <span className="year-badge rounded-lg">2025</span>
+                            <h3 className="year-title">Resultados da Temporada</h3>
+                        </div>
+
+                        <div className="achievements-grid">
+                            {/* Campeonato Brasileiro */}
+                            <div className="achievement-card gold">
+                                <div className="card-medal">🥇</div>
+                                <div className="card-content">
+                                    <span className="card-category">Campeonato Brasileiro</span>
+                                    <h4 className="card-title">Paraciclismo de Estrada</h4>
+                                    <span className="card-detail">Resistência</span>
+                                </div>
+                            </div>
+
+                            <div className="achievement-card gold">
+                                <div className="card-medal">🥇</div>
+                                <div className="card-content">
+                                    <span className="card-category">Campeonato Brasileiro</span>
+                                    <h4 className="card-title">Paraciclismo de Estrada</h4>
+                                    <span className="card-detail">Contrarelógio</span>
+                                </div>
+                            </div>
+
+                            {/* Copa Brasil */}
+                            <div className="achievement-card gold double">
+                                <div className="card-medal">🥇🥇🥈</div>
+                                <div className="card-content">
+                                    <span className="card-category">Copa Brasil</span>
+                                    <h4 className="card-title">Paraciclismo de Estrada</h4>
+                                    <span className="card-detail">Contrarelógio</span>
+                                </div>
+                            </div>
+
+                            <div className="achievement-card gold double">
+                                <div className="card-medal">🥇🥇🥇</div>
+                                <div className="card-content">
+                                    <span className="card-category">Copa Brasil</span>
+                                    <h4 className="card-title">Paraciclismo de Estrada</h4>
+                                    <span className="card-detail">Resistência</span>
+                                </div>
+                            </div>
+
+                            {/* GP e Estadual */}
+                            <div className="achievement-card gold double">
+                                <div className="card-medal">🥇🥇</div>
+                                <div className="card-content">
+                                    <span className="card-category">GP Ciclismo</span>
+                                    <h4 className="card-title">Estrada - Resistência</h4>
+                                    <span className="card-tag">Sub 30 · Convencional</span>
+                                </div>
+                            </div>
+
+                            <div className="achievement-card silver">
+                                <div className="card-medal">🥈</div>
+                                <div className="card-content">
+                                    <span className="card-category">Campeonato Matogrossense</span>
+                                    <h4 className="card-title">Ciclismo de Estrada</h4>
+                                    <span className="card-tag">Sub 30 · Convencional</span>
+                                </div>
+                            </div>
+
+                            {/* MTB */}
+                            <div className="achievement-card gold">
+                                <div className="card-medal">🥇</div>
+                                <div className="card-content">
+                                    <span className="card-category">MTB XCM</span>
+                                    <h4 className="card-title">Regional</h4>
+                                    <span className="card-tag">Sub 30 · Convencional</span>
+                                </div>
+                            </div>
+
+                            <div className="achievement-card bronze">
+                                <div className="card-medal">🥉</div>
+                                <div className="card-content">
+                                    <span className="card-category">MTB XCO</span>
+                                    <h4 className="card-title">Regional</h4>
+                                    <span className="card-tag">Sub 30 · Convencional</span>
                                 </div>
                             </div>
                         </div>
